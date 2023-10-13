@@ -35,6 +35,8 @@ bool Assistant::OnGossipSelect(Player* player, Creature* creature, uint32 sender
         return false;
 
     if (action == 1)
+  //       if (player->GetLevel() >= 40)
+  //          AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "Vanilla Enchantment Scrolls", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANTS + 1);
     {
         OnGossipHello(player, creature);
     }
