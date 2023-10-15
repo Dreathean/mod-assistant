@@ -927,8 +927,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 44497);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 24276);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 29535);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 44453);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 23765);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 38957);  
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 23765); 
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 38948);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 38926);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+42, 38927);
@@ -1021,6 +1020,5 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 38373);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44871);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44963);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44874);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44126);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44873);
 
