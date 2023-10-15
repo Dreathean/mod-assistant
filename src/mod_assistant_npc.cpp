@@ -13,8 +13,8 @@ bool Assistant::OnGossipHello(Player* player, Creature* creature)
     if (GemsEnabled)
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM);
 
-    if (ContainersEnabled)
-        AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want containers", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_CONTAINER);
+    if (FlasksEnabled)
+        AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want flasks", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_FLASK);
 
     if (UtilitiesEnabled)
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want utilities", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES);
@@ -24,7 +24,9 @@ bool Assistant::OnGossipHello(Player* player, Creature* creature)
 
     if (HasValidProfession(player))
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want help with my professions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_PROFESSIONS);
-
+    
+    AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANTS);
+    
     SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
     return true;
 }
@@ -122,52 +124,107 @@ bool Assistant::OnGossipSelect(Player* player, Creature* creature, uint32 sender
         player->GetSession()->SendListInventory(creature->GetGUID(), GetGlyphId(id, major));
     }
     else if (action == ASSISTANT_GOSSIP_GEM)
-    {
+     {
         ClearGossipMenuFor(player);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some meta gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM + 1);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some red gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM + 2);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some blue gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM + 3);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some yellow gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM + 4);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some purple gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM + 5);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some green gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM + 6);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some orange gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM + 7);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some Burning Crusade gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some Wrath of the Lich King gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK);
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Previous Page", GOSSIP_SENDER_MAIN, 1);
         SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
     }
-    else if (action >= ASSISTANT_GOSSIP_GEM + 1 && action <= ASSISTANT_GOSSIP_GEM + 7)
+    
+    else if (action == ASSISTANT_GOSSIP_GEM_WOTLK)
+    {
+        ClearGossipMenuFor(player);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some meta gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK + 1);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some red gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK + 2);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some blue gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK + 3);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some yellow gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK + 4);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some purple gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK + 5);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some green gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK + 6);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some orange gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK + 7);
+        AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Previous Page", GOSSIP_SENDER_MAIN, 1);
+        SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
+    }
+    else if (action >= ASSISTANT_GOSSIP_GEM_WOTLK + 1 && action <= ASSISTANT_GOSSIP_GEM_WOTLK + 7)
     {
         uint32 id = 0;
 
         switch (action)
         {
-        case ASSISTANT_GOSSIP_GEM + 1:
+        case ASSISTANT_GOSSIP_GEM_WOTLK + 1:
             id = ASSISTANT_VENDOR_GEM;
             break;
-        case ASSISTANT_GOSSIP_GEM + 2:
+        case ASSISTANT_GOSSIP_GEM_WOTLK + 2:
             id = ASSISTANT_VENDOR_GEM + 1;
             break;
-        case ASSISTANT_GOSSIP_GEM + 3:
+        case ASSISTANT_GOSSIP_GEM_WOTLK + 3:
             id = ASSISTANT_VENDOR_GEM + 2;
             break;
-        case ASSISTANT_GOSSIP_GEM + 4:
+        case ASSISTANT_GOSSIP_GEM_WOTLK + 4:
             id = ASSISTANT_VENDOR_GEM + 3;
             break;
-        case ASSISTANT_GOSSIP_GEM + 5:
+        case ASSISTANT_GOSSIP_GEM_WOTLK + 5:
             id = ASSISTANT_VENDOR_GEM + 4;
             break;
-        case ASSISTANT_GOSSIP_GEM + 6:
+        case ASSISTANT_GOSSIP_GEM_WOTLK + 6:
             id = ASSISTANT_VENDOR_GEM + 5;
             break;
-        case ASSISTANT_GOSSIP_GEM + 7:
+        case ASSISTANT_GOSSIP_GEM_WOTLK + 7:
             id = ASSISTANT_VENDOR_GEM + 6;
             break;
         }
 
         player->GetSession()->SendListInventory(creature->GetGUID(), id);
     }
-    else if (action == ASSISTANT_GOSSIP_CONTAINER)
+
+else if (action == ASSISTANT_GOSSIP_GEM_BC)
     {
-        player->GetSession()->SendListInventory(creature->GetGUID(), ASSISTANT_VENDOR_CONTAINER);
+        ClearGossipMenuFor(player);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some meta gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC + 1);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some red gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC + 2);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some blue gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC + 3);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some yellow gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC + 4);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some purple gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC + 5);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some green gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC + 6);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some orange gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC + 7);
+        AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Previous Page", GOSSIP_SENDER_MAIN, 1);
+        SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
+    }
+    else if (action >= ASSISTANT_GOSSIP_GEM_BC + 1 && action <= ASSISTANT_GOSSIP_GEM_BC + 7)
+    {
+        uint32 id = 0;
+
+        switch (action)
+        {
+        case ASSISTANT_GOSSIP_GEM_BC + 1:
+            id = ASSISTANT_VENDOR_GEM + 8;
+            break;
+        case ASSISTANT_GOSSIP_GEM_BC + 2:
+            id = ASSISTANT_VENDOR_GEM + 9;
+            break;
+        case ASSISTANT_GOSSIP_GEM_BC + 3:
+            id = ASSISTANT_VENDOR_GEM + 10;
+            break;
+        case ASSISTANT_GOSSIP_GEM_BC + 4:
+            id = ASSISTANT_VENDOR_GEM + 11;
+            break;
+        case ASSISTANT_GOSSIP_GEM_BC + 5:
+            id = ASSISTANT_VENDOR_GEM + 12;
+            break;
+        case ASSISTANT_GOSSIP_GEM_BC + 6:
+            id = ASSISTANT_VENDOR_GEM + 13;
+            break;
+        case ASSISTANT_GOSSIP_GEM_BC + 7:
+            id = ASSISTANT_VENDOR_GEM + 14;
+            break;
+        }
+
+        player->GetSession()->SendListInventory(creature->GetGUID(), id);
+    }
+        
+    else if (action == ASSISTANT_GOSSIP_FLASK)
+    {
+        player->GetSession()->SendListInventory(creature->GetGUID(), ASSISTANT_VENDOR_FLASK);
     }
     else if (action == ASSISTANT_GOSSIP_UTILITIES)
     {
@@ -314,6 +371,52 @@ bool Assistant::OnGossipSelect(Player* player, Creature* creature, uint32 sender
         SetProfession(player, skill);
         OnGossipSelect(player, creature, GOSSIP_SENDER_MAIN, 1);
     }
+    else if (action == ASSISTANT_GOSSIP_ENCHANTS)
+     {
+        ClearGossipMenuFor(player);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some leveling vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 1);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 2);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 3);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good Burning Crusade enchants", GOSSIP_SENDER_MAIN, AASSISTANT_GOSSIP_ENCHANT + 4);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare Burning Crusade enchants", GOSSIP_SENDER_MAIN, AASSISTANT_GOSSIP_ENCHANT + 5);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good WotLK enchants", GOSSIP_SENDER_MAIN, AASSISTANT_GOSSIP_ENCHANT + 6;
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare WotLK enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 7);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some epic WotLK enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 8);
+        AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Previous Page", GOSSIP_SENDER_MAIN, 1);
+        SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
+    }
+    else if (action >= ASSISTANT_GOSSIP_ENCHANT + 1 && action <= ASSISTANT_GOSSIP_ENCHANT + 8)
+    {
+        uint32 id = 0;
 
+        switch (action)
+        {
+        case ASSISTANT_GOSSIP_ENCHANT + 1:
+            id = ASSISTANT_VENDOR_ENCHANT;
+            break;
+        case ASSISTANT_GOSSIP_ENCHANT + 2:
+            id = ASSISTANT_VENDOR_ENCHANT + 1;
+            break;
+        case ASSISTANT_GOSSIP_ENCHANT + 3:
+            id = ASSISTANT_VENDOR_ENCHANT + 2;
+            break;
+        case ASSISTANT_GOSSIP_ENCHANT + 4:
+            id = ASSISTANT_VENDOR_ENCHANT + 3;
+            break;
+        case ASSISTANT_GOSSIP_ENCHANT + 5:
+            id = AASSISTANT_VENDOR_ENCHANT + 4;
+            break;
+        case ASSISTANT_GOSSIP_ENCHANT + 6:
+            id = ASSISTANT_VENDOR_ENCHANT + 5;
+            break;
+        case ASSISTANT_GOSSIP_ENCHANT + 7:
+            id = ASSISTANT_VENDOR_ENCHANT + 6;
+        case ASSISTANT_GOSSIP_ENCHANT + 8:
+            id = ASSISTANT_VENDOR_ENCHANT + 7;
+            break;
+        }
+
+        player->GetSession()->SendListInventory(creature->GetGUID(), id);
+    }
     return true;
 }
