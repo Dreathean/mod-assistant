@@ -20,7 +20,7 @@ enum GossipId
     ASSISTANT_GOSSIP_UTILITIES       = 700,
     ASSISTANT_GOSSIP_PROFESSIONS     = 800,
     ASSISTANT_GOSSIP_ENCHANT         = 900,
-    ASSISTANT_GOSSIP_POTION          = 900,
+    ASSISTANT_GOSSIP_POTION          = 950,
 };
 
 enum VendorId
