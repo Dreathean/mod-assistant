@@ -1,4 +1,4 @@
-FORKED FROM NOISIVER'S NPC ASSISTANT https://github.com/noisiver/mod-assistant, ALL CREDIT TO HIM FOR CREATING THIS.
+Forked from Noisiver's Mod Assistant - https://github.com/noisiver/mod-assistant, all credit goes to him for creating this module.
 
 # Features
 The assistant is a npc spawned in the world and lets a player obtain heirlooms, glyphs, gems, utilities like faction change and race change. The player can also spend gold in order to increase their profession skills. It will be set to the current max value each time the feature is used. They can even unlock flight paths!
