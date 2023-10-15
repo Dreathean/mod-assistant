@@ -26,6 +26,8 @@ bool Assistant::OnGossipHello(Player* player, Creature* creature)
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want help with my professions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_PROFESSIONS);
     
     AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT);
+
+    AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want potions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_POTION);
     
     SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
     return true;
@@ -424,6 +426,40 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
             break;
         case ASSISTANT_GOSSIP_ENCHANT + 8:
             id = ASSISTANT_VENDOR_ENCHANT + 7;
+            break;
+        }
+
+        player->GetSession()->SendListInventory(creature->GetGUID(), id);
+    }
+
+      }
+    else if (action == ASSISTANT_GOSSIP_POTION)
+     {
+        ClearGossipMenuFor(player);
+          if (player->GetLevel() >= 30)
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some vanilla potions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_POTION + 1);
+          if (player->GetLevel() >= 61)
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some Burning Crusade potions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_POTION + 2);
+          if (player->GetLevel() >= 71)
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some WotLK potions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_POTION + 3);
+    
+        AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Previous Page", GOSSIP_SENDER_MAIN, 1);
+        SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
+    }
+    else if (action >= ASSISTANT_GOSSIP_POTION + 1 && action <= ASSISTANT_GOSSIP_POTION + 3)
+    {
+        uint32 id = 0;
+
+        switch (action)
+        {
+        case ASSISTANT_GOSSIP_POTION + 1:
+            id = ASSISTANT_VENDOR_POTION;
+            break;
+        case ASSISTANT_GOSSIP_ENCHANT + 2:
+            id = ASSISTANT_VENDOR_POTION + 1;
+            break;
+        case ASSISTANT_GOSSIP_ENCHANT + 3:
+            id = ASSISTANT_VENDOR_POTION + 2;
             break;
         }
 
