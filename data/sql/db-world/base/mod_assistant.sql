@@ -792,7 +792,6 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38844);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38835);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38849);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38824);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38824);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38826);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38828);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38830);
