@@ -73,7 +73,7 @@ private:
     bool HeirloomsEnabled;
     bool GlyphsEnabled;
     bool GemsEnabled;
-    bool ContainersEnabled;
+    bool FlasksEnabled;
 
     uint32 GetGlyphId(uint32 /*id*/, bool /*major*/);
 
