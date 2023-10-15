@@ -37,8 +37,7 @@ bool Assistant::OnGossipSelect(Player* player, Creature* creature, uint32 sender
         return false;
 
     if (action == 1)
-  //       if (player->GetLevel() >= 40)
-  //          AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "Vanilla Enchantment Scrolls", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANTS + 1);
+
     {
         OnGossipHello(player, creature);
     }
@@ -127,7 +126,10 @@ bool Assistant::OnGossipSelect(Player* player, Creature* creature, uint32 sender
      {
         ClearGossipMenuFor(player);
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some Burning Crusade gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_BC);
+
+     if (player->GetLevel() >= 71)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some Wrath of the Lich King gems", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_GEM_WOTLK);
+         
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Previous Page", GOSSIP_SENDER_MAIN, 1);
         SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
     }
@@ -374,13 +376,21 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
     else if (action == ASSISTANT_GOSSIP_ENCHANT)
      {
         ClearGossipMenuFor(player);
+          if (player->GetLevel() >= 30)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some leveling vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 1);
+          if (player->GetLevel() >= 50)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 2);
+          if (player->GetLevel() >= 58)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 3);
+          if (player->GetLevel() >= 62)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good Burning Crusade enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 4);
+          if (player->GetLevel() >= 68)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare Burning Crusade enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 5);
+          if (player->GetLevel() >= 71)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good WotLK enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 6);
+          if (player->GetLevel() >= 78)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare WotLK enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 7);
+          if (player->GetLevel() >= 80)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some epic WotLK enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 8);
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Previous Page", GOSSIP_SENDER_MAIN, 1);
         SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
