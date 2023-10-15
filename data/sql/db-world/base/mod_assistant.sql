@@ -1000,7 +1000,6 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+44, 44124);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+44, 44880);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+44, 38963);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+44, 44125);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+44, 44125);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+44, 44881);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+44, 44883);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+44, 44882);
@@ -1017,7 +1016,6 @@ UPDATE `item_template` SET `BuyPrice`=1000000, `SellPrice`=0 WHERE `entry` IN (4
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+45;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 41602);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 38374);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 41604);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 41604);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 38373);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44871);
