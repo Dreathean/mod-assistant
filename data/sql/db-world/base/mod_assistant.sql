@@ -1,7 +1,7 @@
 SET
 @Entry := 9000000,
 @Model := 27822,
-@Name  := "Gabriella",
+@Name  := "Magus",
 @Title := "The Assistant",
 @Icon  := "Speak",
 @GossipMenu := 0,
