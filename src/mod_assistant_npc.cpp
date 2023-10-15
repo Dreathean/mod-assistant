@@ -377,8 +377,8 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some leveling vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 1);
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 2);
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 3);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good Burning Crusade enchants", GOSSIP_SENDER_MAIN, AASSISTANT_GOSSIP_ENCHANT + 4);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare Burning Crusade enchants", GOSSIP_SENDER_MAIN, AASSISTANT_GOSSIP_ENCHANT + 5);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good Burning Crusade enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 4);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare Burning Crusade enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 5);
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good WotLK enchants", GOSSIP_SENDER_MAIN, AASSISTANT_GOSSIP_ENCHANT + 6;
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare WotLK enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 7);
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some epic WotLK enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 8);
