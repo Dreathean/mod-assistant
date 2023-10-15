@@ -431,8 +431,6 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
 
         player->GetSession()->SendListInventory(creature->GetGUID(), id);
     }
-
-      }
     else if (action == ASSISTANT_GOSSIP_POTION)
      {
         ClearGossipMenuFor(player);
