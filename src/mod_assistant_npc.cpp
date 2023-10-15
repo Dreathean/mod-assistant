@@ -25,7 +25,7 @@ bool Assistant::OnGossipHello(Player* player, Creature* creature)
     if (HasValidProfession(player))
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want help with my professions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_PROFESSIONS);
     
-    AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANTS);
+    AddGossipItemFor(player, GOSSIP_ICON_CHAT, "I want enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT);
     
     SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
     return true;
