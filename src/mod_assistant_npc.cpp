@@ -379,11 +379,11 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
      {
         ClearGossipMenuFor(player);
           if (player->GetLevel() >= 30)
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some leveling vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 1);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some leveling Vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 1);
           if (player->GetLevel() >= 50)
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 2);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good Vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 2);
           if (player->GetLevel() >= 58)
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 3);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some rare Vanilla enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 3);
           if (player->GetLevel() >= 62)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some good Burning Crusade enchants", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_ENCHANT + 4);
           if (player->GetLevel() >= 68)
@@ -435,7 +435,7 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
      {
         ClearGossipMenuFor(player);
           if (player->GetLevel() >= 30)
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some vanilla potions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_POTION + 1);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some Vanilla potions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_POTION + 1);
           if (player->GetLevel() >= 61)
         AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want some Burning Crusade potions", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_POTION + 2);
           if (player->GetLevel() >= 71)
@@ -453,10 +453,10 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
         case ASSISTANT_GOSSIP_POTION + 1:
             id = ASSISTANT_VENDOR_POTION;
             break;
-        case ASSISTANT_GOSSIP_ENCHANT + 2:
+        case ASSISTANT_GOSSIP_POTION + 2:
             id = ASSISTANT_VENDOR_POTION + 1;
             break;
-        case ASSISTANT_GOSSIP_ENCHANT + 3:
+        case ASSISTANT_GOSSIP_POTION + 3:
             id = ASSISTANT_VENDOR_POTION + 2;
             break;
         }
