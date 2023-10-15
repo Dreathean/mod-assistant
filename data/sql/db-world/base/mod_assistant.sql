@@ -750,10 +750,23 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+36, 32221);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+36, 32218);
 
 -- Flasks
-UPDATE `item_template` SET `BuyPrice`=0, `SellPrice`=0 WHERE `entry` IN (1729, 3604, 3605, 22243);
-UPDATE `item_template` SET `maxcount`=0 WHERE `entry`=1729;
+UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=0 WHERE `entry` IN (13512, 13510, 13513);
+UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=0 WHERE `entry` IN (22866, 22854, 22861, 33208, 22853, 22851);
+UPDATE `item_template` SET `BuyPrice`=500000, `SellPrice`=0 WHERE `entry` IN (46376, 46377, 46379, 46378);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+37;
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 1729);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 13512);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 13510);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 13513);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 22866);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 22854);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 22861);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 33208);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 22853);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 22851);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 46376);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 46377);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 46379);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 46378);
 
 -- Enchantments lvl 40-50
 UPDATE `item_template` SET `BuyPrice`=10000, `SellPrice`=0 WHERE `entry` IN (7967, 15564, 38837, 10548, 38833, 38847, 38848, 8173, 38825, 38846, 38822, 38829, 38845, 38851, 38832, 38827, 38839, 38841, 38844, 38835, 38849, 38824, 38826, 38828, 38830, 38836, 45628, 38840, 38842);
