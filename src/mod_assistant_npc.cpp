@@ -197,25 +197,25 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
         switch (action)
         {
         case ASSISTANT_GOSSIP_GEM_BC + 1:
-            id = ASSISTANT_VENDOR_GEM + 8;
+            id = ASSISTANT_VENDOR_GEM + 7;
             break;
         case ASSISTANT_GOSSIP_GEM_BC + 2:
-            id = ASSISTANT_VENDOR_GEM + 9;
+            id = ASSISTANT_VENDOR_GEM + 8;
             break;
         case ASSISTANT_GOSSIP_GEM_BC + 3:
-            id = ASSISTANT_VENDOR_GEM + 10;
+            id = ASSISTANT_VENDOR_GEM + 9;
             break;
         case ASSISTANT_GOSSIP_GEM_BC + 4:
-            id = ASSISTANT_VENDOR_GEM + 11;
+            id = ASSISTANT_VENDOR_GEM + 10;
             break;
         case ASSISTANT_GOSSIP_GEM_BC + 5:
-            id = ASSISTANT_VENDOR_GEM + 12;
+            id = ASSISTANT_VENDOR_GEM + 11;
             break;
         case ASSISTANT_GOSSIP_GEM_BC + 6:
-            id = ASSISTANT_VENDOR_GEM + 13;
+            id = ASSISTANT_VENDOR_GEM + 12;
             break;
         case ASSISTANT_GOSSIP_GEM_BC + 7:
-            id = ASSISTANT_VENDOR_GEM + 14;
+            id = ASSISTANT_VENDOR_GEM + 13;
             break;
         }
 
@@ -411,6 +411,7 @@ else if (action == ASSISTANT_GOSSIP_GEM_BC)
             break;
         case ASSISTANT_GOSSIP_ENCHANT + 7:
             id = ASSISTANT_VENDOR_ENCHANT + 6;
+            break;
         case ASSISTANT_GOSSIP_ENCHANT + 8:
             id = ASSISTANT_VENDOR_ENCHANT + 7;
             break;
