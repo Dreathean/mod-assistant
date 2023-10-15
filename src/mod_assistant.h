@@ -12,6 +12,7 @@ enum GossipId
     ASSISTANT_GOSSIP_TEXT            = 48,
     ASSISTANT_GOSSIP_HEIRLOOM        = 100,
     ASSISTANT_GOSSIP_GLYPH           = 200,
+    ASSISTANT_GOSSIP_GEM             = 425,
     ASSISTANT_GOSSIP_GEM_WOTLK       = 400,
     ASSISTANT_GOSSIP_GEM_BC          = 450,
     ASSISTANT_GOSSIP_FLASK           = 500,
