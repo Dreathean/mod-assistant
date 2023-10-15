@@ -637,7 +637,6 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+30, 32641);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+30, 25899);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+30, 35503);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+30, 32410);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+30, 33633);
 
 -- Gem: Red 70
 UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=100000 WHERE `entry` IN (24027, 24029, 24028, 24030, 24031, 24032, 24036);
