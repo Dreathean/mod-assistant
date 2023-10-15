@@ -1022,3 +1022,47 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44963);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44874);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+45, 44873);
 
+-- Potions lvl 1-60 Vanilla
+UPDATE `item_template` SET `BuyPrice`=10000, `SellPrice`=0 WHERE `entry` IN (2459, 5634, 5633, 9036, 13442, 13457, 13456, 13458, 13446, 13444);
+DELETE FROM `npc_vendor` WHERE `entry`=@Entry+46;
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 2459);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 5634);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 5633);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 9036);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 13442);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 13457);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 13456);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 13458);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 13446);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+46, 13444);
+
+-- Potions lvl 60-70 Burning Crusade
+UPDATE `item_template` SET `BuyPrice`=50000, `SellPrice`=0 WHERE `entry` IN (22829, 22832, 22838, 22839, 22837, 22849, 22842, 22844, 22845, 22841, 22846);
+DELETE FROM `npc_vendor` WHERE `entry`=@Entry+47;
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22829);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22832);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22838);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22839);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22837);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22849);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22842);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22844);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22845);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22841);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+47, 22846);
+
+-- Potions lvl 70-80 WotLK
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=0 WHERE `entry` IN (33447, 33448, 40211, 40212, 40093, 40215, 40217, 40214, 40216, 40213);
+DELETE FROM `npc_vendor` WHERE `entry`=@Entry+48;
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 33447);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 33448);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 40211);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 40212);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 40093);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 40215);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 40217);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 40214);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 40216);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+48, 40213);
+
+
