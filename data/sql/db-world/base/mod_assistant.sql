@@ -2,7 +2,7 @@ SET
 @Entry := 9000000,
 @Model := 27822,
 @Name  := "Magus",
-@Title := "The Assistant",
+@Title := "Master of Artifacts",
 @Icon  := "Speak",
 @GossipMenu := 0,
 @MinLevel := 30,
@@ -487,7 +487,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+22, 43674);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+22, 44922);
 
 -- Gem: Meta 80
-UPDATE `item_template` SET `BuyPrice`=500000, `SellPrice`=0 WHERE `entry` IN (41285, 41307, 41333, 41335, 41339, 41375, 41376, 41377, 41378, 41379, 41380, 41381, 41382, 41385, 41389, 41395, 41396, 41397, 41398, 41400, 41401);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (41285, 41307, 41333, 41335, 41339, 41375, 41376, 41377, 41378, 41379, 41380, 41381, 41382, 41385, 41389, 41395, 41396, 41397, 41398, 41400, 41401);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+23;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+23, 41285);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+23, 41307);
@@ -519,7 +519,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+23, 44087);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+23, 44088);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+23, 44089);
 -- Gem: Red 80
-UPDATE `item_template` SET `BuyPrice`=500000, `SellPrice`=0 WHERE `entry` IN (40111, 40112, 40113, 40114, 40115, 40116, 40117, 40118, 45862, 45879, 45883);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (40111, 40112, 40113, 40114, 40115, 40116, 40117, 40118, 45862, 45879, 45883);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+24;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+24, 40111);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+24, 40112);
@@ -533,7 +533,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+24, 45862);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+24, 45879);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+24, 45883);
 -- Gem: Blue 80
-UPDATE `item_template` SET `BuyPrice`=500000, `SellPrice`=0 WHERE `entry` IN (40119, 40120, 40121, 40122, 45880, 45881);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (40119, 40120, 40121, 40122, 45880, 45881);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+25;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+25, 40119);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+25, 40120);
@@ -542,7 +542,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+25, 40122);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+25, 45880);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+25, 45881);
 -- Gem: Yellow 80
-UPDATE `item_template` SET `BuyPrice`=500000, `SellPrice`=0 WHERE `entry` IN (40123, 40124, 40125, 40126, 40127, 40128, 45882, 45987);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (40123, 40124, 40125, 40126, 40127, 40128, 45882, 45987);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+26;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+26, 40123);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+26, 40124);
@@ -553,7 +553,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+26, 40128);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+26, 45882);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+26, 45987);
 -- Gem: Purple 80
-UPDATE `item_template` SET `BuyPrice`=500000, `SellPrice`=0 WHERE `entry` IN (40129, 40130, 40131, 40132, 40133, 40134, 40135, 40136, 40137, 40138, 40139, 40140, 40141);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (40129, 40130, 40131, 40132, 40133, 40134, 40135, 40136, 40137, 40138, 40139, 40140, 40141);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+27;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+27, 40129);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+27, 40130);
@@ -569,7 +569,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+27, 40139);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+27, 40140);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+27, 40141);
 -- Gem: Green 80
-UPDATE `item_template` SET `BuyPrice`=500000, `SellPrice`=0 WHERE `entry` IN (40164, 40165, 40166, 40167, 40168, 40169, 40170, 40171, 40172, 40173, 40174, 40175, 40176, 40177, 40178, 40179, 40180, 40181, 40182);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (40164, 40165, 40166, 40167, 40168, 40169, 40170, 40171, 40172, 40173, 40174, 40175, 40176, 40177, 40178, 40179, 40180, 40181, 40182);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+28;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+28, 40164);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+28, 40165);
@@ -591,7 +591,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+28, 40180);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+28, 40181);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+28, 40182);
 -- Gem: Orange 80
-UPDATE `item_template` SET `BuyPrice`=500000, `SellPrice`=0 WHERE `entry` IN (40142, 40143, 40144, 40145, 40146, 40147, 40148, 40149, 40150, 40151, 40152, 40153, 40154, 40155, 40156, 40157, 40158, 40159, 40160, 40161, 40162, 40163);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (40142, 40143, 40144, 40145, 40146, 40147, 40148, 40149, 40150, 40151, 40152, 40153, 40154, 40155, 40156, 40157, 40158, 40159, 40160, 40161, 40162, 40163);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+29;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+29, 40142);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+29, 40143);
@@ -639,8 +639,8 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+30, 35503);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+30, 32410);
 
 -- Gem: Red 70
-UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=100000 WHERE `entry` IN (24027, 24029, 24028, 24030, 24031, 24032, 24036);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=100000 WHERE `entry` IN (32195, 32194, 35489, 32193, 32198, 35487, 32196, 32197, 32199, 35488);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=100000 WHERE `entry` IN (24027, 24029, 24028, 24030, 24031, 24032, 24036);
+UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=100000 WHERE `entry` IN (32195, 32194, 35489, 32193, 32198, 35487, 32196, 32197, 32199, 35488);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+31;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+31, 24027);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+31, 24029);
@@ -660,8 +660,8 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+31, 32199);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+31, 35488);
 
 -- Gem: Blue 70
-UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=100000 WHERE `entry` IN (24033, 24039, 24035, 24037);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=100000 WHERE `entry` IN (32200, 32201, 32202, 32203);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=100000 WHERE `entry` IN (24033, 24039, 24035, 24037);
+UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=100000 WHERE `entry` IN (32200, 32201, 32202, 32203);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+32;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+32, 24033);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+32, 24039);
@@ -673,8 +673,8 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+32, 32202);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+32, 32203);
 
 -- Gem: Yellow 70
-UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=100000 WHERE `entry` IN (24047, 24051, 24052, 24050, 24053, 35315, 24048, 31861);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=100000 WHERE `entry` IN (32205, 32204, 32208, 35761, 32207, 32209, 32206, 32210);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=100000 WHERE `entry` IN (24047, 24051, 24052, 24050, 24053, 35315, 24048, 31861);
+UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=100000 WHERE `entry` IN (32205, 32204, 32208, 35761, 32207, 32209, 32206, 32210);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+33;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+33, 24047);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+33, 24051);
@@ -694,8 +694,8 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+33, 32206);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+33, 32210);
 
 -- Gem: Purple 70
-UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=100000 WHERE `entry` IN (24057, 24055, 24056, 31865, 35707, 24054, 31863);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=100000 WHERE `entry` IN (32216, 32213, 37503, 32214, 32212, 32215, 32211);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=100000 WHERE `entry` IN (24057, 24055, 24056, 31865, 35707, 24054, 31863);
+UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=100000 WHERE `entry` IN (32216, 32213, 37503, 32214, 32212, 32215, 32211);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+34;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+34, 24057);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+34, 24055);
@@ -713,8 +713,8 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+34, 32215);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+34, 32211);
 
 -- Gem: Green 70
-UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=100000 WHERE `entry` IN (33782, 24065, 24062, 24066, 24067, 35318);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=100000 WHERE `entry` IN (32225, 32223, 32224, 32226, 35759, 35758);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=100000 WHERE `entry` IN (33782, 24065, 24062, 24066, 24067, 35318);
+UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=100000 WHERE `entry` IN (32225, 32223, 32224, 32226, 35759, 35758);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+35;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+35, 33782);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+35, 24065);
@@ -730,8 +730,8 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+35, 35759);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+35, 35758);
 
 -- Gem: Orange 70
-UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=100000 WHERE `entry` IN (31867, 32637, 31868, 24061, 24058, 24060, 35316);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=100000 WHERE `entry` IN (32220, 32219, 32222, 35760, 32217, 32221, 32218);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=100000 WHERE `entry` IN (31867, 32637, 31868, 24061, 24058, 24060, 35316);
+UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=100000 WHERE `entry` IN (32220, 32219, 32222, 35760, 32217, 32221, 32218);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+36;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+36, 31867);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+36, 32637);
@@ -750,8 +750,8 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+36, 32218);
 
 -- Flasks
 UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=0 WHERE `entry` IN (13512, 13510, 13513);
-UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=0 WHERE `entry` IN (22866, 22854, 22861, 33208, 22853, 22851);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (46376, 46377, 46379, 46378);
+UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=0 WHERE `entry` IN (22866, 22854, 22861, 33208, 22853, 22851);
+UPDATE `item_template` SET `BuyPrice`=250000, `SellPrice`=0 WHERE `entry` IN (46376, 46377, 46379, 46378);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+37;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 13512);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 13510);
@@ -768,7 +768,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 46379);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+37, 46378);
 
 -- Enchantments lvl 40-50
-UPDATE `item_template` SET `BuyPrice`=10000, `SellPrice`=0 WHERE `entry` IN (7967, 15564, 38837, 10548, 38833, 38847, 38848, 8173, 38825, 38846, 38822, 38829, 38845, 38851, 38832, 38827, 38839, 38841, 38844, 38835, 38849, 38824, 38826, 38828, 38830, 38836, 45628, 38840, 38842);
+UPDATE `item_template` SET `BuyPrice`=5000, `SellPrice`=0 WHERE `entry` IN (7967, 15564, 38837, 10548, 38833, 38847, 38848, 8173, 38825, 38846, 38822, 38829, 38845, 38851, 38832, 38827, 38839, 38841, 38844, 38835, 38849, 38824, 38826, 38828, 38830, 38836, 45628, 38840, 38842);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+38;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 7967);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 15564);
@@ -801,7 +801,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 38842);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+38, 1729);
 
 -- Enchantments lvl 51-60 white/green
-UPDATE `item_template` SET `BuyPrice`=50000, `SellPrice`=0 WHERE `entry` IN (11642, 12645, 38854, 38938, 11644, 25650, 11647, 18173, 38857, 11645, 38863, 18172, 18182, 18330, 38860, 11622, 18331, 11646, 11648, 18170, 18329, 38852, 38853, 38859, 18169, 38856, 38861, 38867, 11643, 11649, 18171, 38858, 38862, 38864, 38866, 38881, 38929, 38855);
+UPDATE `item_template` SET `BuyPrice`=30000, `SellPrice`=0 WHERE `entry` IN (11642, 12645, 38854, 38938, 11644, 25650, 11647, 18173, 38857, 11645, 38863, 18172, 18182, 18330, 38860, 11622, 18331, 11646, 11648, 18170, 18329, 38852, 38853, 38859, 18169, 38856, 38861, 38867, 11643, 11649, 18171, 38858, 38862, 38864, 38866, 38881, 38929, 38855);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+39;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+39, 11642);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+39, 12645);
@@ -843,7 +843,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+39, 38929);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+39, 38855);
 
 -- Enchantments lvl 51-60 rare
-UPDATE `item_template` SET `BuyPrice`=150000, `SellPrice`=0 WHERE `entry` IN (38880, 38877, 38838, 18283, 20077, 19782, 38879, 19783, 38896, 20078, 22638, 38875, 19784, 20076, 19787, 19788, 38872, 22636, 38870, 19785, 38878, 19786, 19789, 19790, 22635, 38869, 18251, 38868, 38871);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=0 WHERE `entry` IN (38880, 38877, 38838, 18283, 20077, 19782, 38879, 19783, 38896, 20078, 22638, 38875, 19784, 20076, 19787, 19788, 38872, 22636, 38870, 19785, 38878, 19786, 19789, 19790, 22635, 38869, 18251, 38868, 38871);
 UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (38873);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+40;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38880);
@@ -878,7 +878,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38871);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38873);
 
 -- Enchantments lvl 65-70 BC white/green 
-UPDATE `item_template` SET `BuyPrice`=200000, `SellPrice`=0 WHERE `entry` IN (29534, 29533, 24273, 23764, 38918, 38917, 28888, 34207, 23530, 29192, 29193, 28887, 29191, 29186, 28910, 28912, 38884, 28886, 30846, 29187, 29189, 28909, 38920, 38919, 38946, 28889, 35728, 38947, 28911, 35729, 35730, 35731);
+UPDATE `item_template` SET `BuyPrice`=120000, `SellPrice`=0 WHERE `entry` IN (29534, 29533, 24273, 23764, 38918, 38917, 28888, 34207, 23530, 29192, 29193, 28887, 29191, 29186, 28910, 28912, 38884, 28886, 30846, 29187, 29189, 28909, 38920, 38919, 38946, 28889, 35728, 38947, 28911, 35729, 35730, 35731, 38913, 38933, 38902, 38889, 38895, 38945, 38939, 38882, 38899, 38910, 38944);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+41;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 29534);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 29533);
@@ -912,7 +912,17 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 28911);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 35729);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 35730);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 35731);
-
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38913);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38933);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38902);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38889);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38895);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38945);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38939);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38882);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38899);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38910);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+41, 38944);
 
 -- Enchantments lvl 70 BC rare 
 UPDATE `item_template` SET `BuyPrice`=400000, `SellPrice`=0 WHERE `entry` IN (38925, 41146, 24274, 23766, 29536, 44497, 24276, 29535, 44453, 23765, 38957, 38948, 38926, 38927, 38922, 38924, 38923, 38998);
