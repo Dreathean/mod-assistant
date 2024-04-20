@@ -843,8 +843,8 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+39, 38929);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+39, 38855);
 
 -- Enchantments lvl 51-60 rare
-UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=0 WHERE `entry` IN (38880, 38877, 38838, 18283, 20077, 19782, 38879, 19783, 38896, 20078, 22638, 38875, 19784, 20076, 19787, 19788, 38872, 22636, 38870, 19785, 38878, 19786, 19789, 19790, 22635, 38869, 18251, 38868, 38871);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (38873);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=0 WHERE `entry` IN (38880, 38838, 18283, 20077, 19782, 38879, 19783, 38896, 20078, 22638, 38875, 19784, 20076, 19787, 19788, 38872, 22636, 38870, 19785, 38878, 19786, 19789, 19790, 22635, 38869, 18251, 38868, 38871);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (38873, 38877);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+40;
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38880);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38877);
