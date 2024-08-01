@@ -7,4 +7,4 @@ All items obtained from the Assistant are free to purchase, however users can ea
 
 All the features listed above are enabled, or disabled, through the configuration - allowing a user to only use the features they want.
 
-My fork adds Burning Crusade Gems as well as gear enchantments and major flasks.
+My fork adds Burning Crusade Gems as well as enchantments and major consumables sorted by level ranges.
