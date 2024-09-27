@@ -843,39 +843,40 @@ INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+39, 38929);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+39, 38855);
 
 -- Enchantments lvl 51-60 rare
-UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=0 WHERE `entry` IN (38880, 38838, 18283, 20077, 19782, 38879, 19783, 38896, 20078, 22638, 38875, 19784, 20076, 19787, 19788, 38872, 22636, 38870, 19785, 38878, 19786, 19789, 19790, 22635, 38869, 18251, 38868, 38871);
-UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (38873, 38877);
+UPDATE `item_template` SET `BuyPrice`=100000, `SellPrice`=0 WHERE `entry` IN (38880, 38838, 18283, 20077, 38879, 38896, 20078, 22638, 38875, 20076, 38872, 22636, 38870, 38878, 22635, 38869, 18251, 38868, 38871);
+UPDATE `item_template` SET `BuyPrice`=300000, `SellPrice`=0 WHERE `entry` IN (38873, 38877, 19789, 19782, 19790, 19786, 19784, 19787, 19788, 19785);
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry+40;
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38880);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38873);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38877);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19782);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19789);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19790);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19786);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19784);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19787);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19788);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19785);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19783);
+INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38880);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38838);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 18283);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 20077);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19782);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38879);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19783);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38896);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 20078);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 22638);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38875);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19784);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 20076);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19787);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19788);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38872);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 22636);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38870);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19785);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38878);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19786);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19789);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 19790);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 22635);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38869);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 18251);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38868);
 INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38871);
-INSERT INTO `npc_vendor` (`entry`, `item`) VALUES (@Entry+40, 38873);
+
 
 -- Enchantments lvl 65-70 BC white/green 
 UPDATE `item_template` SET `BuyPrice`=120000, `SellPrice`=0 WHERE `entry` IN (29534, 29533, 24273, 23764, 38918, 38917, 28888, 34207, 23530, 29192, 29193, 28887, 29191, 29186, 28910, 28912, 38884, 28886, 30846, 29187, 29189, 28909, 38920, 38919, 38946, 28889, 35728, 38947, 28911, 35729, 35730, 35731, 38913, 38933, 38902, 38889, 38895, 38945, 38939, 38882, 38899, 38910, 38944);
