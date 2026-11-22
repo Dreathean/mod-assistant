@@ -1,38 +1,37 @@
 SET
-@Entry := 9000000,
-@Model := 27822,
-@Name  := "Magus",
-@Title := "Master of Artifacts",
-@Icon  := "Speak",
-@GossipMenu := 0,
-@MinLevel := 60,
-@MaxLevel := 60,
-@Faction  := 35,
-@NPCFlag  := 129,
-@Scale    := 1.0,
-@Rank     := 0,
-@Type     := 7,
-@TypeFlags := 0,
+@Entry      := 9000000,
+@Model      := 27822,
+@Name       := "Magus",
+@Title      := "The Assistant",
+@Icon       := "Speak",
+@MinLevel   := 30,
+@MaxLevel   := 30,
+@Faction    := 35,
+@NPCFlag    := 129,
+@Type       := 7,
 @FlagsExtra := 16777218,
 @Script     := "npc_assistant";
 
--- Creature template
 DELETE FROM `creature_template` WHERE `entry`=@Entry;
-INSERT INTO `creature_template` (`entry`, `modelid1`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `ScriptName`) VALUES
-(@Entry, @Model, @Name, @Title, @Icon, @GossipMenu, @MinLevel, @MaxLevel, @Faction, @NPCFlag, 1, 1, @Scale, @Rank, 1, 2, @Type, @TypeFlags, 1, @FlagsExtra, @Script);
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `unit_class`, `unit_flags`, `type`, `flags_extra`, `ScriptName`) VALUES
+(@Entry, @Name, @Title, @Icon, @MinLevel, @MaxLevel, @Faction, @NPCFlag, 1, 2, @Type, @FlagsExtra, @Script);
 
--- Spawn points
-DELETE FROM `creature` WHERE `id1`=@Entry;
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 0, -8824.65, 649.467, 94.5585, 4.47955); -- Stormwind
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 0, -4978.68, -947.674, 501.66, 5.0182); -- Ironforge
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 1, 9949.92, 2498.44, 1317.8, 4.44686); -- Darnassus
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 530, -3911.11, -11606.3, -138.326, 4.73595); -- Exodar
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 1, 1675.72, -4424.67, 18.8421, 2.39778); -- Orgrimmar
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 1, -1271.36, 132.402, 132.023, 4.57086); -- Thunder Bluff
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 0, 1555.03, 246.513, -43.1027, 0.073205); -- Undercity
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 530, 9469.83, -7294.44, 14.3078, 0.105431); -- Silvermoon City
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 530, -1832.44, 5389.19, -12.4279, 2.3428); -- Shattrath
-INSERT INTO `creature` (`id1`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (@Entry, 571, 5792.65, 636.492, 647.39, 0.00637221); -- Dalaran
+DELETE FROM `creature_template_model` WHERE `CreatureID`=@Entry;
+INSERT INTO `creature_template_model` (`CreatureID`, `Idx`, `CreatureDisplayID`, `DisplayScale`, `Probability`) VALUES
+(@Entry, 0, @Model, 1, 1);
+
+DELETE FROM `creature` WHERE `id`=@Entry;
+INSERT INTO `creature` (`id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES
+(@Entry, 0, -8824.65, 649.467, 94.5585, 4.47955), -- Stormwind City
+(@Entry, 0, -4956.91, -932.369, 501.66, 4.77523), -- City of Ironforge
+(@Entry, 0, 1590.66, 272.521, -55.3428, 0.361283), -- Undercity
+(@Entry, 1, 9929.71, 2507.59, 1318.17, 4.78701), -- Darnassus
+(@Entry, 1, 1619.08, -4443.65, 10.869, 1.73804), -- Orgrimmar
+(@Entry, 1, -1292.12, 116.913, 131.175, 5.78446), -- Thunder Bluff
+(@Entry, 530, -3955.07, -11670, -138.757, 3.29082), -- The Exodar
+(@Entry, 530, 9469.83, -7294.44, 14.3078, 0.105431), -- Silvermoon City
+(@Entry, 530, -1814.49, 5425.97, -12.4281, 2.87456), -- Shattrath City
+(@Entry, 571, 5791.71, 560.464, 650.657, 1.79314); -- Dalaran
 
 -- Heirloom: Weapon
 DELETE FROM `npc_vendor` WHERE `entry`=@Entry;
